@@ -19,7 +19,7 @@ const ListingItem = ({ professionalData }) => {
                         <div className='mb-8'>
                             <div className='text-gray-900 font-bold text-xl mb-2'>
                                 <Link
-                                    href={`professional/${professionalData.id.value}`}
+                                    href={`../professional/${professionalData.id.value}`}
                                 >
                                     {`${title} ${first} ${last}`}
                                 </Link>
