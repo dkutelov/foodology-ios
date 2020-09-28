@@ -10,24 +10,32 @@ const ProfessionalProfile = ({ professionalData }) => {
                 <div className='w-2/3'>
                     <div className='flex'>
                         <div
-                            className='w-1/4 h-48 bg-cover rounded text-center overflow-hidden'
+                            className='w-1/4 h-48 bg-cover rounded-lg text-center overflow-hidden'
                             style={{
                                 backgroundImage: `url('${professionalData.picture.large}')`,
                             }}
                         ></div>
-                        <div className='w-3/4 p-5'>
-                            <h2>{`${title} ${first} ${last}`}</h2>
+                        <div className='w-2/4 p-5'>
+                            <h2 className='text-2xl text-bold'>{`${title} ${first} ${last}`}</h2>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Tenetur quam eligendi nemo
-                                deleniti accusantium est ipsum corrupti itaque
-                                maxime, recusandae repellendus cupiditate
-                                molestiae animi numquam inventore suscipit, iste
-                                illum id?
+                                adipisicing elit.
+                            </p>
+                            <p className='text-gray-700 text-sm'>
+                                Location:
+                                {` ${professionalData.location.city}, ${professionalData.location.state}, ${professionalData.location.country}`}
                             </p>
                         </div>
+                        <div className='w1/4'>
+                            <button className='bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-4 rounded w-full mb-2'>
+                                Book
+                            </button>
+                            <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-full'>
+                                Message
+                            </button>
+                        </div>
                     </div>
-                    <div className='border-solid border-2 border-gray-100 rounded my-5 p-5'>
+                    <div className='border border-indigo-500 rounded shadow my-5 p-5'>
                         <h2 className='text-center'>За специалиста</h2>
                         <div>
                             <p className='my-5'>
@@ -54,7 +62,9 @@ const ProfessionalProfile = ({ professionalData }) => {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/3 bg-gray-100'>schedule</div>
+                <div className='w-1/3 bg-gray-100 m-4 p-4 rounded'>
+                    schedule
+                </div>
             </div>
         </section>
     );

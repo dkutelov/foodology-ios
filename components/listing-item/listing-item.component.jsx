@@ -8,14 +8,17 @@ const ListingItem = ({ professionalData }) => {
         <div className='flex'>
             <div>
                 <div className='max-w-sm w-full lg:max-w-full lg:flex mb-5'>
-                    <div
-                        className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden'
-                        style={{
-                            backgroundImage: `url('${professionalData.picture.large}')`,
-                        }}
-                        title='Woman holding a mug'
-                    ></div>
-                    <div className='border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal'>
+                    <div className='p-4 border-l border-b border-t border-indigo-500 rounded-l'>
+                        <div
+                            className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-lg text-center overflow-hidden'
+                            style={{
+                                backgroundImage: `url('${professionalData.picture.large}')`,
+                                height: '100%',
+                            }}
+                            title='Woman holding a mug'
+                        ></div>
+                    </div>
+                    <div className='border-r border-b border-l border-indigo-500 lg:border-l-0 lg:border-t lg:border-indigo-500 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal'>
                         <div className='mb-8'>
                             <div className='text-gray-900 font-bold text-xl mb-2'>
                                 <Link
@@ -29,6 +32,16 @@ const ListingItem = ({ professionalData }) => {
                                 adipisicing elit. Voluptatibus quia, nulla!
                                 Maiores et perferendis eaque, exercitationem
                                 praesentium nihil.
+                            </p>
+                            <p className='text-gray-700 text-sm'>
+                                email: {professionalData.email}
+                            </p>
+                            <p className='text-gray-700 text-sm'>
+                                phone: {professionalData.phone}
+                            </p>
+                            <p className='text-gray-700 text-sm'>
+                                Location:
+                                {` ${professionalData.location.city}, ${professionalData.location.state}, ${professionalData.location.country}`}
                             </p>
                         </div>
                         <div className='flex items-center'>
