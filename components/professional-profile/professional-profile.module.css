@@ -1,0 +1,30 @@
+.flag__wrap {
+    position: relative;
+    margin-left: 6px;
+}
+
+.country__flag {
+    width: 16px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #edeff0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.country__flag:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 75%;
+}
+
+.country_big {
+    width: 21px;
+    height: 14px;
+}

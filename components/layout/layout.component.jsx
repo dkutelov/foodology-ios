@@ -6,10 +6,10 @@ import Footer from '../footer/footer.component';
 
 export default function Layout({ children, home }) {
     return (
-        <>
+        <div className='text-primaryText'>
             <Header />
             <main className={layoutStyles.main_wrapper}>{children}</main>
             <Footer />
-        </>
+        </div>
     );
 }

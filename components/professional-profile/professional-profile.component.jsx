@@ -9,14 +9,28 @@ const ProfessionalProfile = ({ professionalData }) => {
             <div className='flex my-12'>
                 <div className='w-2/3'>
                     <div className='flex'>
-                        <div
-                            className='w-1/4 h-48 bg-cover rounded-lg text-center overflow-hidden'
-                            style={{
-                                backgroundImage: `url('${professionalData.picture.large}')`,
-                            }}
-                        ></div>
-                        <div className='w-2/4 p-5'>
-                            <h2 className='text-2xl text-bold'>{`${title} ${first} ${last}`}</h2>
+                        <div className='w-1/4'>
+                            <div
+                                className='mt-1 h-48 bg-cover rounded-lg text-center overflow-hidden'
+                                style={{
+                                    backgroundImage: `url('${professionalData.picture.large}')`,
+                                }}
+                            ></div>
+                        </div>
+                        <div className='w-2/4 px-5'>
+                            <h2>
+                                <span className='text-2xl text-gray-900 text-semibold'>{`${title} ${first} ${last}`}</span>
+                                <span className={styles.flag__wrap}>
+                                    <i
+                                        className={`${styles.country__flag} ${styles.country_big} rounded-sm`}
+                                        style={{
+                                            backgroundImage: `url('/flags/nl-flag.svg')`,
+                                        }}
+                                    ></i>
+                                </span>
+                                <span>ico</span>
+                            </h2>
+
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit.

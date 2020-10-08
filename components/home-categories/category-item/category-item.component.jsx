@@ -5,9 +5,9 @@ const CategoryItem = ({ category }) => {
         <div className='w-1/3 my-2'>
             <Link href={`/listing/${category.id}`}>
                 <a>
-                    <div className='mx-1 border border-indigo-300 rounded overflow-hidden shadow'>
-                        <div className='px-6 py-4'>
-                            <div className='font-bold text-center mb-2'>
+                    <div className='mx-1 border border-primary rounded overflow-hidden shadow hover:bg-primary'>
+                        <div className='px-12 py-8'>
+                            <div className='font-bold text-center'>
                                 {category.name}
                             </div>
                         </div>

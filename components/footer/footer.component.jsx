@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Footer = () => (
-    <div className='fixed bottom-0 w-full bg-indigo-500'>
+    <div className='fixed bottom-0 w-full bg-primary text-primaryText'>
         <div className='container mx-auto'>
             <div className='text-white py-6 text-center'>
-                Pitam Se - &copy;2020
+                PendingName - &copy;2020
             </div>
         </div>
     </div>

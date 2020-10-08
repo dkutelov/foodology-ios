@@ -1,18 +1,26 @@
 export const categories = [
     {
         id: 1,
-        name: 'Проблеми при тинейджъри',
+        name: 'Burn out',
     },
     {
         id: 2,
-        name: 'Криза на средната възраст',
+        name: 'Panic attacks',
     },
     {
         id: 3,
-        name: 'Проблеми след раздяла',
+        name: 'Post divorse depression',
     },
     {
         id: 4,
-        name: 'Проблеми при малки деца',
+        name: 'Hyper active kid',
+    },
+    {
+        id: 5,
+        name: 'Teen problems',
+    },
+    {
+        id: 6,
+        name: 'Middle age crisis',
     },
 ];

@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 const Header = () => {
     return (
-        <nav className='bg-indigo-500'>
+        <nav className='bg-primary'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between flex-wrap py-6 px-1'>
                     <Link href='/'>
                         <a>
                             <div className='flex items-center flex-shrink-0 text-white mr-6'>
                                 <span className='font-semibold tracking-tight'>
-                                    Питам Сe?
+                                    PendingName
                                 </span>
                             </div>
                         </a>
@@ -32,19 +32,19 @@ const Header = () => {
                                 href='#responsive-header'
                                 className='block mt-4 lg:inline-block lg:mt-0 text-indigo-100 hover:text-white mr-4'
                             >
-                                Намери психолог
+                                Find Specialist
                             </a>
                             <a
                                 href='#responsive-header'
                                 className='block mt-4 lg:inline-block lg:mt-0 text-indigo-100 hover:text-white mr-4'
                             >
-                                За фирми
+                                For companies
                             </a>
                             <a
                                 href='#responsive-header'
                                 className='block mt-4 lg:inline-block lg:mt-0 text-indigo-100 hover:text-white'
                             >
-                                Присъедни се като професионалист
+                                Join our specialists
                             </a>
                         </div>
                         <div>
@@ -52,7 +52,7 @@ const Header = () => {
                                 href='#'
                                 className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0'
                             >
-                                Вход
+                                Log In
                             </a>
                         </div>
                     </div>
