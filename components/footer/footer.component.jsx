@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => (
-    <div className='fixed bottom-0 w-full bg-primary text-primaryText'>
+    <div className='bottom-0 w-full bg-footerBackgroundColor text-primaryText'>
         <div className='container mx-auto'>
             <div className='text-white py-6 text-center'>
                 PendingName - &copy;2020

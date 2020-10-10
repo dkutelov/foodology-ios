@@ -8,7 +8,7 @@ const ListingItem = ({ professionalData }) => {
         <div className='flex'>
             <div>
                 <div className='max-w-sm w-full lg:max-w-full lg:flex mb-5'>
-                    <div className='p-4 border-l border-b border-t border-indigo-500 rounded-l'>
+                    <div className='p-4 border-l border-b border-t border-sectionBorderColor rounded-l shadow-sm bg-sectionBackgroundColor'>
                         <div
                             className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-lg text-center overflow-hidden'
                             style={{
@@ -18,7 +18,7 @@ const ListingItem = ({ professionalData }) => {
                             title='Woman holding a mug'
                         ></div>
                     </div>
-                    <div className='border-r border-b border-l border-indigo-500 lg:border-l-0 lg:border-t lg:border-indigo-500 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal'>
+                    <div className='border-r border-b border-l border-sectionBorderColor lg:border-l-0 lg:border-t lg:border-sectionBorderColor bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal shadow-sm'>
                         <div className='mb-8'>
                             <div className='text-gray-900 font-bold text-xl mb-2'>
                                 <Link

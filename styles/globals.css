@@ -2,6 +2,65 @@
     --color-primary: #7ae2f0;
     --color-primary-text: #003147;
     --color-secondary: #121258;
+    --color-accent-dark: #fc3c17;
+    --color-accent-light: #fc5130;
+
+    --accentColor: #0a2540;
+    --blendBackground: #80e9ff;
+    --blendIntersection: #0048e5;
+    --blendForeground: #7a73ff;
+
+    --shadeOneColor: #02bcf5;
+    --shadeTwoColor: #0073e6;
+    --shadeThreeColor: #003ab9;
+    --shadeFourColor: #635bff;
+    --shadeFiveColor: #002c59;
+    --shadeSixColor: #09cbcb;
+
+    --backgroundColor: #f6f9fc;
+
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #0a2540;
+
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #0a2540;
+    --buttonDisabledColor: #cfd7df;
+
+    --knockoutColor: #fff;
+    --knockoutDisabledColor: #8898aa;
+
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #0a2540;
+
+    --textColor: #425466;
+    --inputBackground: #e6ebf1;
+    --inputPlaceholderColor: #8898aa;
+    --annotationColor: #8c9eb1;
+
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+
+    --navColor: #0a2540;
+    --navHoverColor: #0a2540;
+    --navHoverOpacity: 0.6;
+
+    --footerColor: #0a2540;
+    --footerBackgroundColor: #8c9eb1;
+
+    --cardBorderColor: #cbd6e0;
+    --cardBackground: #fff;
+    --subcardBackground: #f6f9fc;
+    --tableIconColor: #8c9eb1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
 }
 
 @import 'tailwindcss/base';

@@ -1,0 +1,11 @@
+.header__home {
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.header {
+    background-color: white;
+}

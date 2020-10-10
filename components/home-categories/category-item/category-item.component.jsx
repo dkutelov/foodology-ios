@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
-const CategoryItem = ({ category }) => {
+const CategoryItem = ({ subcategory }) => {
     return (
-        <div className='w-1/3 my-2'>
-            <Link href={`/listing/${category.id}`}>
+        <div className='w-1/3 mb-2'>
+            <Link href={`/listing/${subcategory.id}`}>
                 <a>
-                    <div className='mx-1 border border-primary rounded overflow-hidden shadow hover:bg-primary'>
-                        <div className='px-12 py-8'>
+                    <div className='mx-1 border border-sectionBorderColor rounded overflow-hidden shadow-sm hover:border-primary hover:shadow-lg'>
+                        <div className='px-12 pt-6 pb-6'>
                             <div className='font-bold text-center'>
-                                {category.name}
+                                {subcategory.name}
                             </div>
                         </div>
                     </div>

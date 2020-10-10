@@ -1,18 +1,31 @@
 import CategoryItem from '../category-item/category-item.component';
 
 const CategoriesList = ({ categories }) => {
-    return (
-        <section className='container mx-auto text-primaryText antialiased'>
-            <h3 className='text-center uppercase text-4xl text-semibold pt-16 pb-6'>
-                Categories
-            </h3>
-            <div className='flex flex-wrap my-4'>
-                {categories.map((category) => (
-                    <CategoryItem category={category} key={category.id} />
-                ))}
+    const mainCategories = new Set(categories.map((category) => category.main));
+
+    return Array.from(mainCategories).map((mainCategory) => {
+        const subCategories = categories.filter(
+            (category) => category.main === mainCategory
+        );
+        return (
+            <div
+                className='container mx-auto text-primaryText antialiased pt-6'
+                key={mainCategory}
+            >
+                <h3 className='text-center uppercase text-2xl text-semibold pt-6 pb-3'>
+                    {mainCategory}
+                </h3>
+                <div className='flex flex-wrap my-4'>
+                    {subCategories.map((subcategory) => (
+                        <CategoryItem
+                            subcategory={subcategory}
+                            key={subcategory.id}
+                        />
+                    ))}
+                </div>
             </div>
-        </section>
-    );
+        );
+    });
 };
 
 export default CategoriesList;

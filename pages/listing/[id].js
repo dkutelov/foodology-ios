@@ -9,10 +9,18 @@ import {
 export default function ListingPage({ category, professionalsData }) {
     return (
         <Layout>
-            <ListingPreview
-                category={category}
-                professionalsData={professionalsData}
-            />
+            <div className='container  mx-auto'>
+                <div className='pt-16'>
+                    <h2 className='text-center text-4xl text-gray-900 text-semibold mb-12'>
+                        Specialists in {category.name}
+                    </h2>
+
+                    <ListingPreview
+                        category={category}
+                        professionalsData={professionalsData}
+                    />
+                </div>
+            </div>
         </Layout>
     );
 }
