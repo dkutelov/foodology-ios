@@ -1,3 +1,16 @@
+.content_top_offset {
+    margin-top: -300px;
+}
+
+.extended {
+    height: auto;
+}
+
+.cropped {
+    height: 120px;
+    overflow: hidden;
+}
+
 .flag__wrap {
     position: relative;
     margin-left: 6px;
