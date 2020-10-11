@@ -5,7 +5,17 @@ import { getCategoriesData } from '../lib/categories';
 export default function Home({ categories }) {
     return (
         <Layout>
-            <CategoriesList categories={categories} />
+            <div className='bg-backgroundColor'>
+                <div
+                    className='bg-white container mx-auto rounded p-4'
+                    style={{
+                        position: 'relative',
+                        top: '-64px',
+                    }}
+                >
+                    <CategoriesList categories={categories} />
+                </div>
+            </div>
         </Layout>
     );
 }

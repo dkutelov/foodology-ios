@@ -9,7 +9,7 @@ const CategoriesList = ({ categories }) => {
         );
         return (
             <div
-                className='container mx-auto text-primaryText antialiased pt-6'
+                className='text-primaryText antialiased pt-6'
                 key={mainCategory}
             >
                 <h3 className='text-center uppercase text-2xl text-semibold pt-6 pb-3'>

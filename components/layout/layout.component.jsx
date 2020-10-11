@@ -8,7 +8,7 @@ export default function Layout({ children, home }) {
     return (
         <div className='text-primaryText'>
             <Header />
-            <main className='bg-backgroundColor pb-64'>{children}</main>
+            <main>{children}</main>
             <Footer />
         </div>
     );

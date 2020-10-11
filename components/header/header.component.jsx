@@ -7,14 +7,19 @@ import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
 const Header = () => {
     const router = useRouter();
     let isHome = router.pathname === '/';
+    const headerStyle = isHome
+        ? {
+              backgroundImage: `url('/home/home-banner-new.webp')`,
+              marginBottom: '-64px',
+          }
+        : {
+              backgroundImage: 'none',
+              marginBottom: '0px',
+          };
     return (
         <header
             className={isHome ? styles.header__home : styles.header}
-            style={{
-                backgroundImage: isHome
-                    ? `url('/home/home-banner-new.webp')`
-                    : 'none',
-            }}
+            style={headerStyle}
         >
             <nav
                 className={`bg-transparent ${
