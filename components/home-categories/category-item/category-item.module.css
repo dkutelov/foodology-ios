@@ -1,0 +1,21 @@
+.subcategory_list__item {
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    border-radius: 8px;
+    height: 28px;
+    width: fit-content;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.subcategory_list__link {
+    font-size: 14px;
+    line-height: 20px;
+    color: #3c4447;
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+    cursor: pointer;
+}
