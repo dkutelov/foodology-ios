@@ -1,0 +1,34 @@
+.calendar__col {
+    width: 100%;
+}
+
+.calender__col_inner {
+    margin: 0 5px;
+    padding: 0 5px;
+    border-top: 4px solid #aeb5bc;
+}
+
+.calender__col_inner_busy {
+    background-color: var(--color-primary);
+}
+
+.calendar__col_inner_head {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 14px 0;
+}
+
+.calendar__col_inner_body {
+    padding-bottom: 14px;
+}
+
+.calendar__time {
+    color: #c5cbd2;
+    pointer-events: none;
+    line-height: 2.14285714;
+    background: 0 0;
+    transition: color 50ms, background 50ms;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    display: block;
+}

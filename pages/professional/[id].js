@@ -1,5 +1,7 @@
 import Layout from '../../components/layout/layout.component';
 import ProfessionalProfile from '../../components/professional-profile/professional-profile.component';
+import Calendar from '../../components/calendar/calendar/calendar.component';
+
 import {
     getAllProfessionalsIds,
     getProfessionalData,
@@ -22,41 +24,9 @@ export default function ProfessionalPage({ professionalData }) {
                                     <h2 className='text-2xl mb-4 trackling-wider'>
                                         Schedule
                                     </h2>
-                                    <div>Schedule comes here</div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Iste error saepe eum
-                                        numquam? Deleniti quidem voluptas nisi
-                                        accusantium sit ducimus dolore neque
-                                        perspiciatis commodi, vel doloremque
-                                        quasi molestias, consectetur veritatis!
-                                        Veritatis, id libero sunt earum voluptas
-                                        suscipit nisi laboriosam maxime nobis
-                                        repellat voluptates tempore! Eius
-                                        explicabo quo temporibus reprehenderit
-                                        in mollitia architecto sunt velit
-                                        recusandae odio veniam, nemo quidem.
-                                        Itaque? Voluptas et nostrum natus,
-                                        magnam cupiditate amet impedit ipsum
-                                        excepturi praesentium non, aspernatur
-                                        culpa sed dignissimos blanditiis
-                                        eligendi tempora harum corporis ipsam
-                                        expedita laudantium doloribus suscipit
-                                        minima pariatur. Sunt, incidunt. Autem
-                                        totam consectetur quae temporibus eaque
-                                        odio nisi voluptatem enim voluptatibus
-                                        impedit eum ab eius cupiditate quia
-                                        provident dolores officiis, sit
-                                        incidunt! Repellat velit accusantium
-                                        voluptatem quo harum, ut aspernatur.
-                                        Exercitationem, iure quibusdam veritatis
-                                        commodi quaerat alias quod eligendi
-                                        delectus, ab doloremque aperiam, veniam
-                                        laboriosam. Cupiditate quos soluta,
-                                        pariatur quae harum tenetur tempore
-                                        accusantium culpa aut sed quibusdam
-                                        alias aliquid?
-                                    </p>
+                                    <Calendar
+                                        timeTable={professionalData.timeTable}
+                                    />
                                 </div>
                             </div>
                             <div className='w-1/3 bg-gray-100 p-12 rounded'>
