@@ -1,6 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 
+import CalenderTime from '../calendar-time/calendar-time.component';
 import styles from './calendar-day.module.css';
 
 const getInnerColClass = (timeSlots) => {
@@ -27,13 +28,11 @@ const CalenderDay = ({ dayTable: { date, timeSlots } }) => {
                 </div>
             </div>
             <div className={styles.calendar__col_inner_body}>
-                {timeSlots.map((slot) => (
-                    <span
-                        className={styles.calendar__time}
-                        key={`${currentDate}-${slot.slot}`}
-                    >
-                        {slot.slot}
-                    </span>
+                {timeSlots.map((timeSlot) => (
+                    <CalenderTime
+                        timeSlot={timeSlot}
+                        key={`${currentDate}-${timeSlot.slot}`}
+                    />
                 ))}
             </div>
         </div>
