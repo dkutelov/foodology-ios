@@ -25,13 +25,14 @@
     position: relative;
 }
 
-.call_to_action__wrap:hover {
+.call_to_action__wrap:hover .call_to_action {
     /* transform: translate3d(-50%, 0, 0); */
     position: relative;
     opacity: 1;
     pointer-events: all;
     right: auto;
     opacity: 1;
+    transform: translate3d(0, -70px, 0);
 }
 
 .call_to_action {

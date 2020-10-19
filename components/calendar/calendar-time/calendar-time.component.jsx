@@ -10,7 +10,7 @@ const CalenderTime = ({ timeSlot: { slot, available } }) => {
         <span className={calenderTimeClasee}>
             {slot}
             <span className={styles.call_to_action}>
-                <i>-> </i>
+                <i>*</i>
                 Book available time
             </span>
         </span>

@@ -143,6 +143,7 @@ export const professionals = [
     {
         gender: 'female',
         categories: [1],
+        timeTable: [],
         name: {
             title: 'Mrs',
             first: 'Cathy',
@@ -201,6 +202,7 @@ export const professionals = [
     {
         gender: 'female',
         categories: [1, 3],
+        timeTable: [],
         name: {
             title: 'Ms',
             first: 'Ibtisam',
@@ -259,6 +261,7 @@ export const professionals = [
     {
         gender: 'male',
         categories: [1, 2, 3, 4],
+        timeTable: [],
         name: {
             title: 'Mr',
             first: 'Francisco',
@@ -317,6 +320,7 @@ export const professionals = [
     {
         gender: 'male',
         categories: [1, 2],
+        timeTable: [],
         name: {
             title: 'Mr',
             first: 'Øystein',
