@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import styles from './header.module.css';
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+import HomeSearch from '../home-search/home-search.component';
 
 const Header = () => {
     const router = useRouter();
@@ -21,6 +21,7 @@ const Header = () => {
             className={isHome ? styles.header__home : styles.header}
             style={headerStyle}
         >
+            {isHome && <HomeSearch />}
             <nav
                 className={`bg-transparent ${
                     isHome ? 'text-white' : 'text-primaryText'
