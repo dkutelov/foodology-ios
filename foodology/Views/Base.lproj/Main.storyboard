@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cart-->
         <scene sceneID="YSL-gd-7H8">
@@ -49,20 +54,62 @@
         <!--Home-->
         <scene sceneID="XQJ-EZ-Kee">
             <objects>
-                <viewController id="cr0-9L-X5C" userLabel="Home" customClass="HomeViewController" customModule="foodology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today's Meals" id="cr0-9L-X5C" userLabel="Home" customClass="HomeViewController" customModule="foodology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wZf-eg-IAA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ly0-NY-DLY">
+                                <rect key="frame" x="0.0" y="192" width="414" height="704"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cr0-9L-X5C" id="Nq6-Pv-Imb"/>
+                                    <outlet property="delegate" destination="cr0-9L-X5C" id="mXS-Qr-rz8"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select You Favorite Dish Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-lW-sdO">
+                                <rect key="frame" x="106.5" y="100" width="201" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
+                                <color key="textColor" name="mainText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-Vm-Ste">
+                                <rect key="frame" x="57" y="128" width="300" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3Cx-iX-52R"/>
+                                    <constraint firstAttribute="height" constant="40" id="K44-Yg-Lb8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Starter"/>
+                                    <segment title="Main"/>
+                                    <segment title="Dessert"/>
+                                </segments>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="selectedSegmentTintColor" name="Primary"/>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5uo-oY-GCw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ly0-NY-DLY" firstAttribute="top" secondItem="TL4-Vm-Ste" secondAttribute="bottom" constant="24" id="1Cs-Q0-vzO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ly0-NY-DLY" secondAttribute="bottom" id="9Kp-f0-tgE"/>
+                            <constraint firstItem="Ly0-NY-DLY" firstAttribute="leading" secondItem="5uo-oY-GCw" secondAttribute="leading" id="JEA-Ad-V3Q"/>
+                            <constraint firstItem="Lsb-lW-sdO" firstAttribute="centerX" secondItem="wZf-eg-IAA" secondAttribute="centerX" id="NcT-wU-xWh"/>
+                            <constraint firstItem="Ly0-NY-DLY" firstAttribute="trailing" secondItem="5uo-oY-GCw" secondAttribute="trailing" id="TS4-nk-iW3"/>
+                            <constraint firstItem="Lsb-lW-sdO" firstAttribute="bottom" secondItem="TL4-Vm-Ste" secondAttribute="top" constant="-8" id="TyY-eN-xgV"/>
+                            <constraint firstItem="TL4-Vm-Ste" firstAttribute="centerX" secondItem="wZf-eg-IAA" secondAttribute="centerX" id="hu6-O2-ChF"/>
+                            <constraint firstItem="TL4-Vm-Ste" firstAttribute="top" secondItem="5uo-oY-GCw" secondAttribute="top" constant="40" id="uvk-od-txA"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="SbG-P7-wkv">
-                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="small"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="twd-Ha-cEt"/>
+                    <connections>
+                        <outlet property="menuSegmentControl" destination="TL4-Vm-Ste" id="5p4-uB-ngY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6B-Jn-jlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="-268"/>
+            <point key="canvasLocation" x="647.82608695652175" y="-268.52678571428572"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XYj-QM-46W">
@@ -80,7 +127,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="cr0-9L-X5C" kind="relationship" relationship="viewControllers" id="9rW-Wc-YfZ"/>
+                        <segue destination="v28-kZ-G1c" kind="relationship" relationship="viewControllers" id="9rW-Wc-YfZ"/>
                         <segue destination="dHP-Pd-RbQ" kind="relationship" relationship="viewControllers" id="k5j-PW-cmy"/>
                         <segue destination="mUD-am-jzv" kind="relationship" relationship="viewControllers" id="lel-HE-Xol"/>
                     </connections>
@@ -88,6 +135,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKW-JR-KVS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1170" y="432"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="59v-hI-2hK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v28-kZ-G1c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="SbG-P7-wkv">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="small"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ye2-wM-fPX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="32"/>
+                            <color key="textColor" name="titleText"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cr0-9L-X5C" kind="relationship" relationship="rootViewController" id="CKE-56-m2C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55B-vF-alq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="-268.52678571428572"/>
         </scene>
     </scenes>
     <resources>
@@ -98,8 +170,17 @@
             <color red="0.99599999189376831" green="0.44699999690055847" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
-            <color red="0.14901960784313725" green="0.070588235294117646" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14900000393390656" green="0.071000002324581146" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="mainText">
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleText">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
