@@ -7,18 +7,6 @@
 
 import Foundation
 
-enum MealType: String {
-    case Starter
-    case Main
-    case Dessert
-    case unknown
-}
-
-enum Category: String {
-    case MeatDishes = "Meat Dishes"
-    case unknown
-}
-
 struct Meal {
     let price: Int
     let title: String
@@ -26,8 +14,8 @@ struct Meal {
     let images: [String]
     let calories: [String]
     let ingredients: [String]
-    let mealType: MealType
-    let mealCategory: Category
+    var mealType: String
+    var mealCategory: String
     
     
     init(price: Int,
@@ -36,8 +24,8 @@ struct Meal {
          images: [String],
          calories: [String],
          ingredients: [String],
-         mealType: MealType,
-         mealCategory: Category) {
+         mealType: String,
+         mealCategory: String) {
         self.price = price
         self.title = title
         self.description = description
@@ -56,7 +44,36 @@ struct Meal {
         self.images = data["images"] as? [String] ?? [String]()
         self.calories = data["calories"] as? [String] ?? [String]()
         self.ingredients = data["ingredients"] as? [String] ?? [String]()
-        self.mealType =  MealType(rawValue: data["type"] as? String ?? "unknown") ?? MealType.unknown
-        self.mealCategory = Category(rawValue: data["category"] as? String ?? "unknown") ?? Category.unknown
+        self.mealType =  data["mealType"] as? String ?? ""
+        self.mealCategory =  data["mealCategory"] as? String ?? ""
+    }
+}
+
+extension Meal {
+    enum MealType: String {
+        case Starter
+        case Main
+        case Dessert
+        case unknown
+    }
+    
+    var eMealType: MealType {
+        get {
+            return Meal.MealType(rawValue: self.mealType) ?? .unknown
+        }
+    }
+}
+
+extension Meal {
+    enum Category: String {
+        case MeatDishes = "Meat Dishes"
+        case ChickenDishes = "Chicken dishes"
+        case unknown
+    }
+    
+    var eCategory: Category {
+        get {
+            return Meal.Category(rawValue: self.mealCategory) ?? .unknown
+        }
     }
 }
