@@ -17,6 +17,9 @@
 		9C6F771E27AE9CAC001C9F04 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F771D27AE9CAC001C9F04 /* SDWebImage */; };
 		9C6F772027AE9CAC001C9F04 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F771F27AE9CAC001C9F04 /* SDWebImageMapKit */; };
 		9C6F772227AEA134001C9F04 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F772127AEA134001C9F04 /* IntExtension.swift */; };
+		9C6F772427AECC4F001C9F04 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F772327AECC4F001C9F04 /* MealDetailViewController.swift */; };
+		9C6F772627AECFDC001C9F04 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F772527AECFDC001C9F04 /* DatabaseManager.swift */; };
+		9C6F772827AED0A6001C9F04 /* MealManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F772727AED0A6001C9F04 /* MealManager.swift */; };
 		9CE3742927AD83DD003D3909 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742527AD83A8003D3909 /* Poppins-Bold.ttf */; };
 		9CE3742A27AD83E8003D3909 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742627AD83B0003D3909 /* Poppins-ExtraBold.ttf */; };
 		9CE3742B27AD83ED003D3909 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742727AD83BA003D3909 /* Poppins-Light.ttf */; };
@@ -39,6 +42,9 @@
 		9C6F771827AE94D5001C9F04 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		9C6F771A27AE9AA6001C9F04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C6F772127AEA134001C9F04 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		9C6F772327AECC4F001C9F04 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		9C6F772527AECFDC001C9F04 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9C6F772727AED0A6001C9F04 /* MealManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealManager.swift; sourceTree = "<group>"; };
 		9CE3742527AD83A8003D3909 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		9CE3742627AD83B0003D3909 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		9CE3742727AD83BA003D3909 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 		9C10678227AD182000B13E14 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9C6F772527AECFDC001C9F04 /* DatabaseManager.swift */,
+				9C6F772727AED0A6001C9F04 /* MealManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 		9CE3743427AE676E003D3909 /* MealDetailScreens */ = {
 			isa = PBXGroup;
 			children = (
+				9C6F772327AECC4F001C9F04 /* MealDetailViewController.swift */,
 			);
 			path = MealDetailScreens;
 			sourceTree = "<group>";
@@ -270,10 +279,13 @@
 				9C10676B27AD0FBD00B13E14 /* AppDelegate.swift in Sources */,
 				9C10676D27AD0FBD00B13E14 /* SceneDelegate.swift in Sources */,
 				9C6F772227AEA134001C9F04 /* IntExtension.swift in Sources */,
+				9C6F772427AECC4F001C9F04 /* MealDetailViewController.swift in Sources */,
 				9CE3743027AE59BE003D3909 /* MockData.swift in Sources */,
 				9C6F771927AE94D5001C9F04 /* MealTableViewCell.swift in Sources */,
 				9CE3743A27AE6C44003D3909 /* ProfileViewController.swift in Sources */,
+				9C6F772627AECFDC001C9F04 /* DatabaseManager.swift in Sources */,
 				9CE3743727AE6BB7003D3909 /* CartViewController.swift in Sources */,
+				9C6F772827AED0A6001C9F04 /* MealManager.swift in Sources */,
 				9CE3743327AE6741003D3909 /* HomeViewController.swift in Sources */,
 				9C6F771B27AE9AA6001C9F04 /* Constants.swift in Sources */,
 			);

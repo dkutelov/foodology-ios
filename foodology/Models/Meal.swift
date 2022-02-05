@@ -68,6 +68,7 @@ extension Meal {
     enum Category: String {
         case MeatDishes = "Meat Dishes"
         case ChickenDishes = "Chicken dishes"
+        case SeaFood = "Sea Food"
         case unknown
     }
     

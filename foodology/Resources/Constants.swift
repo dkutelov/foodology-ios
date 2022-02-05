@@ -11,6 +11,10 @@ struct CellId {
     static let MealTableCell = "MealTableCell"
 }
 
+struct SegueId {
+    static let MealDetails = "MealDetails"
+}
+
 struct ImageName {
     static let placehoderImage = "image-placeholder"
 }

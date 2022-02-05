@@ -12,23 +12,53 @@ class HomeViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var menuSegmentControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
     var meals = [Meal]()
+    var selectedMeal: Meal?
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Today's Meals"
-        meals = mockData
+        meals = MealManager.shared.getMealsByType(mealType: .Starter)
         
         setUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let mealDetailViewController = segue.destination as? MealDetailViewController,
+           let meal = selectedMeal {
+            mealDetailViewController.meal = meal
+        }
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func menuSegmentControlTapped(_ sender: Any) {
+        var selectedMealType: Meal.MealType
+        
+        switch menuSegmentControl.selectedSegmentIndex {
+        case 0:
+            selectedMealType = .Starter
+        case 1:
+            selectedMealType = .Main
+        case 2:
+            selectedMealType = .Dessert
+        default:
+            selectedMealType = .Starter
+            break
+        }
+        
+        meals = MealManager.shared.getMealsByType(mealType: selectedMealType)
+        tableView.reloadData()
+    }
     
     // MARK: - Private methods
+    
     private func setUI() {
         if let font = UIFont(name: "Poppins-Light", size: 16){
             menuSegmentControl.setTitleTextAttributes(
@@ -40,6 +70,8 @@ class HomeViewController: UIViewController {
          //Family: Poppins Font names: ["Poppins-Regular", "Poppins-Light", "Poppins-Bold", "Poppins-ExtraBold"]
     }
 }
+
+// MARK: - Table View Data Source
 
 extension HomeViewController: UITableViewDataSource {
     
@@ -55,5 +87,15 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.configureCell(meal: meals[indexPath.row])
         return cell
+    }
+}
+
+// MARK: - Table View Delegate
+
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMeal = meals[indexPath.row]
+        performSegue(withIdentifier: SegueId.MealDetails, sender: self)
     }
 }

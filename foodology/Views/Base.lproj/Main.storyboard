@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ly0-NY-DLY">
-                                <rect key="frame" x="0.0" y="192" width="414" height="704"/>
+                                <rect key="frame" x="0.0" y="202" width="414" height="694"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealTableCell" rowHeight="110" id="ecn-UH-Yrn" customClass="MealTableViewCell" customModule="foodology" customModuleProvider="target">
@@ -84,8 +84,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i1-Bc-oh6">
-                                                    <rect key="frame" x="134" y="41" width="188.5" height="28"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
+                                                    <rect key="frame" x="122" y="43.5" width="204.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                                     <color key="textColor" name="titleText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -97,13 +97,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0i1-Bc-oh6" firstAttribute="centerY" secondItem="mCf-jF-4C6" secondAttribute="centerY" id="1hQ-Ct-ILs"/>
-                                                <constraint firstItem="ecg-Gm-fOE" firstAttribute="centerY" secondItem="mCf-jF-4C6" secondAttribute="centerY" id="FMy-di-d03"/>
                                                 <constraint firstAttribute="bottom" secondItem="9sm-W3-833" secondAttribute="bottom" constant="12" id="GAb-uD-Hlh"/>
-                                                <constraint firstItem="0i1-Bc-oh6" firstAttribute="leading" secondItem="9sm-W3-833" secondAttribute="trailing" constant="24" id="MTi-DZ-3CO"/>
+                                                <constraint firstItem="0i1-Bc-oh6" firstAttribute="leading" secondItem="9sm-W3-833" secondAttribute="trailing" constant="12" id="MTi-DZ-3CO"/>
+                                                <constraint firstItem="ecg-Gm-fOE" firstAttribute="centerY" secondItem="mCf-jF-4C6" secondAttribute="centerY" id="ROU-FD-5xm"/>
+                                                <constraint firstItem="0i1-Bc-oh6" firstAttribute="centerY" secondItem="mCf-jF-4C6" secondAttribute="centerY" id="WQB-qm-wzZ"/>
                                                 <constraint firstItem="9sm-W3-833" firstAttribute="leading" secondItem="mCf-jF-4C6" secondAttribute="leading" constant="24" id="Wzv-EN-ViX"/>
+                                                <constraint firstItem="0i1-Bc-oh6" firstAttribute="trailing" secondItem="ecg-Gm-fOE" secondAttribute="leading" constant="-8" id="m5n-gs-Hyy"/>
                                                 <constraint firstAttribute="trailing" secondItem="ecg-Gm-fOE" secondAttribute="trailing" constant="24" id="oKn-lZ-0Sm"/>
-                                                <constraint firstItem="ecg-Gm-fOE" firstAttribute="leading" secondItem="0i1-Bc-oh6" secondAttribute="trailing" constant="12" id="rgd-mp-15k"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -119,13 +119,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select You Favorite Dish Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-lW-sdO">
-                                <rect key="frame" x="114.5" y="103.5" width="185.5" height="16.5"/>
+                                <rect key="frame" x="114.5" y="113.5" width="185.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="14"/>
                                 <color key="textColor" name="mainText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TL4-Vm-Ste">
-                                <rect key="frame" x="57" y="128" width="300" height="41"/>
+                                <rect key="frame" x="57" y="138" width="300" height="41"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3Cx-iX-52R"/>
@@ -138,6 +138,9 @@
                                 </segments>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="selectedSegmentTintColor" name="Primary"/>
+                                <connections>
+                                    <action selector="menuSegmentControlTapped:" destination="cr0-9L-X5C" eventType="valueChanged" id="KIT-JZ-Rcu"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5uo-oY-GCw"/>
@@ -150,17 +153,35 @@
                             <constraint firstItem="Ly0-NY-DLY" firstAttribute="trailing" secondItem="5uo-oY-GCw" secondAttribute="trailing" id="TS4-nk-iW3"/>
                             <constraint firstItem="Lsb-lW-sdO" firstAttribute="bottom" secondItem="TL4-Vm-Ste" secondAttribute="top" constant="-8" id="TyY-eN-xgV"/>
                             <constraint firstItem="TL4-Vm-Ste" firstAttribute="centerX" secondItem="wZf-eg-IAA" secondAttribute="centerX" id="hu6-O2-ChF"/>
-                            <constraint firstItem="TL4-Vm-Ste" firstAttribute="top" secondItem="5uo-oY-GCw" secondAttribute="top" constant="40" id="uvk-od-txA"/>
+                            <constraint firstItem="TL4-Vm-Ste" firstAttribute="top" secondItem="5uo-oY-GCw" secondAttribute="top" constant="50" id="uvk-od-txA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="twd-Ha-cEt"/>
                     <connections>
                         <outlet property="menuSegmentControl" destination="TL4-Vm-Ste" id="5p4-uB-ngY"/>
+                        <outlet property="tableView" destination="Ly0-NY-DLY" id="dL4-wK-vBR"/>
+                        <segue destination="GFQ-cB-AB1" kind="show" identifier="MealDetails" id="vUb-gK-vKj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6B-Jn-jlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647.82608695652175" y="-268.52678571428572"/>
+            <point key="canvasLocation" x="616" y="-271"/>
+        </scene>
+        <!--Meal Detail View Controller-->
+        <scene sceneID="hrU-Qu-zN4">
+            <objects>
+                <viewController id="GFQ-cB-AB1" customClass="MealDetailViewController" customModule="foodology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPD-VH-niW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="p8k-DO-t5q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k0Y-SX-dqr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVX-uS-fEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552" y="-271"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XYj-QM-46W">
