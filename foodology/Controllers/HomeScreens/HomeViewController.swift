@@ -42,13 +42,18 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellId.MealTableCell, for: indexPath) as? MealTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configureCell(meal: meals[indexPath.row])
+        return cell
     }
-    
-    
 }

@@ -12,6 +12,11 @@
 		9C10677227AD0FBD00B13E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677027AD0FBD00B13E14 /* Main.storyboard */; };
 		9C10677427AD0FBE00B13E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677327AD0FBE00B13E14 /* Assets.xcassets */; };
 		9C10677727AD0FBE00B13E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677527AD0FBE00B13E14 /* LaunchScreen.storyboard */; };
+		9C6F771927AE94D5001C9F04 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F771827AE94D5001C9F04 /* MealTableViewCell.swift */; };
+		9C6F771B27AE9AA6001C9F04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F771A27AE9AA6001C9F04 /* Constants.swift */; };
+		9C6F771E27AE9CAC001C9F04 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F771D27AE9CAC001C9F04 /* SDWebImage */; };
+		9C6F772027AE9CAC001C9F04 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F771F27AE9CAC001C9F04 /* SDWebImageMapKit */; };
+		9C6F772227AEA134001C9F04 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F772127AEA134001C9F04 /* IntExtension.swift */; };
 		9CE3742927AD83DD003D3909 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742527AD83A8003D3909 /* Poppins-Bold.ttf */; };
 		9CE3742A27AD83E8003D3909 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742627AD83B0003D3909 /* Poppins-ExtraBold.ttf */; };
 		9CE3742B27AD83ED003D3909 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742727AD83BA003D3909 /* Poppins-Light.ttf */; };
@@ -31,6 +36,9 @@
 		9C10677327AD0FBE00B13E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C10677627AD0FBE00B13E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C10677827AD0FBE00B13E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6F771827AE94D5001C9F04 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		9C6F771A27AE9AA6001C9F04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C6F772127AEA134001C9F04 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		9CE3742527AD83A8003D3909 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		9CE3742627AD83B0003D3909 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		9CE3742727AD83BA003D3909 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -47,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6F772027AE9CAC001C9F04 /* SDWebImageMapKit in Frameworks */,
+				9C6F771E27AE9CAC001C9F04 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +128,8 @@
 				9C10676C27AD0FBD00B13E14 /* SceneDelegate.swift */,
 				9C10676A27AD0FBD00B13E14 /* AppDelegate.swift */,
 				9CE3742F27AE59BE003D3909 /* MockData.swift */,
+				9C6F771A27AE9AA6001C9F04 /* Constants.swift */,
+				9C6F772127AEA134001C9F04 /* IntExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9CE3743227AE6741003D3909 /* HomeViewController.swift */,
+				9C6F771827AE94D5001C9F04 /* MealTableViewCell.swift */,
 			);
 			path = HomeScreens;
 			sourceTree = "<group>";
@@ -187,6 +200,10 @@
 			dependencies = (
 			);
 			name = foodology;
+			packageProductDependencies = (
+				9C6F771D27AE9CAC001C9F04 /* SDWebImage */,
+				9C6F771F27AE9CAC001C9F04 /* SDWebImageMapKit */,
+			);
 			productName = foodology;
 			productReference = 9C10676727AD0FBD00B13E14 /* foodology.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 9C10675E27AD0FBD00B13E14;
+			packageReferences = (
+				9C6F771C27AE9CAC001C9F04 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 9C10676827AD0FBD00B13E14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,10 +269,13 @@
 				9CE3742E27AD8614003D3909 /* Meal.swift in Sources */,
 				9C10676B27AD0FBD00B13E14 /* AppDelegate.swift in Sources */,
 				9C10676D27AD0FBD00B13E14 /* SceneDelegate.swift in Sources */,
+				9C6F772227AEA134001C9F04 /* IntExtension.swift in Sources */,
 				9CE3743027AE59BE003D3909 /* MockData.swift in Sources */,
+				9C6F771927AE94D5001C9F04 /* MealTableViewCell.swift in Sources */,
 				9CE3743A27AE6C44003D3909 /* ProfileViewController.swift in Sources */,
 				9CE3743727AE6BB7003D3909 /* CartViewController.swift in Sources */,
 				9CE3743327AE6741003D3909 /* HomeViewController.swift in Sources */,
+				9C6F771B27AE9AA6001C9F04 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +493,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C6F771C27AE9CAC001C9F04 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C6F771D27AE9CAC001C9F04 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6F771C27AE9CAC001C9F04 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		9C6F771F27AE9CAC001C9F04 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6F771C27AE9CAC001C9F04 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C10675F27AD0FBD00B13E14 /* Project object */;
 }
