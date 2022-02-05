@@ -1,22 +1,19 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  foodology
 //
-//  Created by Dariy Kutelov on 4.02.22.
+//  Created by Dariy Kutelov on 5.02.22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeViewController: UIViewController {
     var meals = [Meal]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         meals = mockData
     }
-
-
+    
 }
-

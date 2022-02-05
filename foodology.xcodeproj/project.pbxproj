@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9C10676B27AD0FBD00B13E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C10676A27AD0FBD00B13E14 /* AppDelegate.swift */; };
 		9C10676D27AD0FBD00B13E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C10676C27AD0FBD00B13E14 /* SceneDelegate.swift */; };
-		9C10676F27AD0FBD00B13E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C10676E27AD0FBD00B13E14 /* ViewController.swift */; };
 		9C10677227AD0FBD00B13E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677027AD0FBD00B13E14 /* Main.storyboard */; };
 		9C10677427AD0FBE00B13E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677327AD0FBE00B13E14 /* Assets.xcassets */; };
 		9C10677727AD0FBE00B13E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C10677527AD0FBE00B13E14 /* LaunchScreen.storyboard */; };
@@ -19,13 +18,15 @@
 		9CE3742C27AD83F2003D3909 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3742827AD83C0003D3909 /* Poppins-Regular.ttf */; };
 		9CE3742E27AD8614003D3909 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3742D27AD8614003D3909 /* Meal.swift */; };
 		9CE3743027AE59BE003D3909 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3742F27AE59BE003D3909 /* MockData.swift */; };
+		9CE3743327AE6741003D3909 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3743227AE6741003D3909 /* HomeViewController.swift */; };
+		9CE3743727AE6BB7003D3909 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3743627AE6BB7003D3909 /* CartViewController.swift */; };
+		9CE3743A27AE6C44003D3909 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3743927AE6C44003D3909 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C10676727AD0FBD00B13E14 /* foodology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C10676A27AD0FBD00B13E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C10676C27AD0FBD00B13E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C10676E27AD0FBD00B13E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C10677127AD0FBD00B13E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C10677327AD0FBE00B13E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C10677627AD0FBE00B13E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		9CE3742827AD83C0003D3909 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9CE3742D27AD8614003D3909 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		9CE3742F27AE59BE003D3909 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		9CE3743227AE6741003D3909 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9CE3743627AE6BB7003D3909 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9CE3743927AE6C44003D3909 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,10 @@
 		9C10677E27AD164300B13E14 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C10676E27AD0FBD00B13E14 /* ViewController.swift */,
+				9CE3743827AE6C26003D3909 /* ProfileScreens */,
+				9CE3743527AE6B91003D3909 /* CartScreens */,
+				9CE3743127AE6715003D3909 /* HomeScreens */,
+				9CE3743427AE676E003D3909 /* MealDetailScreens */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +138,37 @@
 				9CE3742827AD83C0003D3909 /* Poppins-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		9CE3743127AE6715003D3909 /* HomeScreens */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3743227AE6741003D3909 /* HomeViewController.swift */,
+			);
+			path = HomeScreens;
+			sourceTree = "<group>";
+		};
+		9CE3743427AE676E003D3909 /* MealDetailScreens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MealDetailScreens;
+			sourceTree = "<group>";
+		};
+		9CE3743527AE6B91003D3909 /* CartScreens */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3743627AE6BB7003D3909 /* CartViewController.swift */,
+			);
+			path = CartScreens;
+			sourceTree = "<group>";
+		};
+		9CE3743827AE6C26003D3909 /* ProfileScreens */ = {
+			isa = PBXGroup;
+			children = (
+				9CE3743927AE6C44003D3909 /* ProfileViewController.swift */,
+			);
+			path = ProfileScreens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,10 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CE3742E27AD8614003D3909 /* Meal.swift in Sources */,
-				9C10676F27AD0FBD00B13E14 /* ViewController.swift in Sources */,
 				9C10676B27AD0FBD00B13E14 /* AppDelegate.swift in Sources */,
 				9C10676D27AD0FBD00B13E14 /* SceneDelegate.swift in Sources */,
 				9CE3743027AE59BE003D3909 /* MockData.swift in Sources */,
+				9CE3743A27AE6C44003D3909 /* ProfileViewController.swift in Sources */,
+				9CE3743727AE6BB7003D3909 /* CartViewController.swift in Sources */,
+				9CE3743327AE6741003D3909 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
